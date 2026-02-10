@@ -3,7 +3,9 @@ from django.urls import path
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("home 1")
+    return render(request, 'recipes/home.html', context={
+        'name': 'Marcos Eduardo',
+    })
 
 def sobre(request):
     return HttpResponse("sobre")
